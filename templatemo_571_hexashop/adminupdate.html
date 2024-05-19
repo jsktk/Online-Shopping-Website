@@ -1,0 +1,205 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <title>Flash shop</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{%static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+    <title>Document</title>
+</head>
+<style>
+    .black-btn {
+        width: 100%;
+        height: 44px;
+        display: inline-block;
+        text-align: center;
+        line-height: 44px;
+        background-color: #2f2f2f;
+        box-shadow: none;
+        border: 1px solid transparent;
+
+        transition: all 0.3s;
+    }
+
+    .black-btn a {
+        color: #fff;
+    }
+
+
+    .box {
+
+        padding-left: 300px;
+
+    }
+
+    .tt {
+        padding-right: 400px;
+
+    }
+</style>
+
+<body>
+    <center>
+        <div class="row">
+            <!-- <div class="col-lg-10"> -->
+            <!-- <div class="thumb"> -->
+            <!-- <div class="inner-content"> -->
+            <div class="box">
+                <div class="contact-us">
+                    <div class="section-heading">
+                        <center>
+                            <h1 class="text-black tt mt-5">Update-Product</h1>
+                        </center>
+                    </div>
+                    <form id="contact" action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-8 mt-3">
+                                <fieldset>
+                                    <input name="product" type="text" required="" value="{{obj.product}}">
+                                </fieldset>
+                            </div>
+                            <br><br><br>
+                            <div class="col-lg-8 mt-4">
+                                <fieldset>
+                                    <input name="productname" type="text" placeholder="product name" required="" value="{{obj.productname}}">
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-8 mt-4">
+                                <fieldset>
+                                    <input name="productprice" type="number" placeholder="product price" required="" >
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-8 mt-4">
+                                <fieldset>
+                                    <input name="productofferprice" type="text" placeholder="product offer price"
+                                        required="" value="{{obj.productofferprice}}">
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-8 mt-4">
+                                <fieldset>
+                                    <input name="productcategory" type="text" placeholder="product category"
+                                        required="" value="{{obj.productcategory}}">
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-8 mt-4">
+                                <fieldset>
+                                    <input name="stock" type="number" placeholder="No.of Stock" required="" value="stock">
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-8 mt-4">
+                                <fieldset>
+                                    <input name="productdescription" type="text" placeholder="product description"
+                                        required="" value="productdescription">
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-8 mt-4">
+                                <fieldset>
+                                    <input name="productbrandname" type="text" placeholder="product brand name"
+                                        required="" value="productbrandname">
+                                </fieldset>
+                                <div class="col-lg-8 mt-4">
+                                    <fieldset>
+                                        <input name="productimage" type="file" placeholder="upload flie" required="" value="productimage">
+                                    </fieldset>
+                                </div>
+                            </div> <br><br><br>
+                            <div class="col-lg-12 mt-4">
+                                <fieldset>
+                                    <button type="submit" class="main-dark-button">Update Product&nbsp;&nbsp;<i
+                                            class="fa fa-paper-plane"></i></button> <br><br>
+                            </div>
+                        </div>
+                </div>
+                </form>
+                <!-- <img width="100%" src="{% static 'assets/images/jojo-logo.png' %}" alt=""> -->
+            </div>
+        </div>
+        <!-- </div> -->
+        </div>
+        </div>
+        </div>
+        </div>
+    </center>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- jQuery -->
+    <script src="{% static 'assets/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
+    <script src="{% static 'assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/imgfix.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.js' %}"></script>
+
+    <!-- Global Init -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+    <script>
+
+        $(function () {
+            var selectedClass = "";
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+        function func() {
+            let element = document.getElementById("ul")
+            let style = window.getComputedStyle(element)
+            let display = style.getPropertyValue('display')
+            if (display == "none") {
+                document.getElementById("ul").style.display = "block"
+            }
+            else {
+                document.getElementById("ul").style.display = "none"
+            }
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>

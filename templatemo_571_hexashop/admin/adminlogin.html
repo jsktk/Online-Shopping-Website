@@ -1,0 +1,211 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <title>Flash shop</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{%static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+    <title>Document</title>
+</head>
+<style>
+    .black-btn {
+        width: 100%;
+        height: 44px;
+        display: inline-block;
+        text-align: center;
+        line-height: 44px;
+        background-color: #2f2f2f;
+        box-shadow: none;
+        border: 1px solid transparent;
+
+        transition: all 0.3s;
+    }
+
+    .black-btn a {
+        color: #fff;
+    }
+
+
+    .box {
+        
+        padding-left: 300px;
+
+    }
+</style>
+
+<body>
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="/adminlogin" class="logo">
+                        <img class="rounded-circle" width="150px" src="{% static 'assets/images/jojo-logo.png' %}">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <!-- <li class="scroll-to-section"><a href="/index" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="/adminadproduct">products</a></li>
+                        <li class="scroll-to-section"><a href="/index">Orders</a></li>
+                        <li class="scroll-to-section"><a href="/manageorder">Manage Orders</a></li>
+                        <li class="scroll-to-section"><a href="/logout">Logout</a></li> -->
+                        <!-- <li class="submenu">
+                                    <a href="javascript:;">Pages</a>
+                                    <ul>
+                                        <li><a href="/about">About Us</a></li>
+                                        <li><a href="/products">Products</a></li>
+                                        <li><a href="/singleproduct">Single Product</a></li>
+                                        <li><a href="/contact">Contact Us</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="javascript:;">Features</a>
+                                    <ul>
+                                        <li><a href="#">Features Page 1</a></li>
+                                        <li><a href="#">Features Page 2</a></li>
+                                        <li><a href="#">Features Page 3</a></li>
+                                        <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template
+                                                Page 4</a></li>
+                                    </ul>
+                                </li>
+                                <li class="scroll-to-section"><a href="/index">Explore</a></li> -->
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+<br><br><br><br><br><br>
+
+    <center>
+        <div class="row">
+            <!-- <div class="col-lg-10"> -->
+            <!-- <div class="thumb"> -->
+            <!-- <div class="inner-content"> -->
+            <div class="box">
+                <div class="contact-us">
+                    <div class="section-heading">
+                        <center>
+                            <h1 class="text-black mt-5">Admin-login</h1>
+                        </center>
+                    </div>
+                    <form id="contact" action="/adminlogin" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-8 mt-3">
+                                <fieldset>
+                                    <input name="username" type="text" placeholder="username" required="">
+                                </fieldset>
+                            </div>
+                            <br><br><br>
+                            <div class="col-lg-8 mt-4">
+                                <fieldset>
+                                    <input name="password" type="password" placeholder="password" required="">
+                                </fieldset>
+                            </div><br><br><br>
+                            <div class="col-lg-12 mt-4">
+                                <fieldset>
+                                    <button type="submit" class="main-dark-button">Login&nbsp;&nbsp;<i
+                                            class="fa fa-paper-plane"></i></button> <br><br>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- <img width="100%" src="{% static 'assets/images/jojo-logo.png' %}" alt=""> -->
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+        </div>
+        </div>
+        </div>
+    </center>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- jQuery -->
+    <script src="{% static 'assets/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
+    <script src="{% static 'assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/imgfix.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.js' %}"></script>
+
+    <!-- Global Init -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+    <script>
+
+        $(function () {
+            var selectedClass = "";
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+        function func() {
+            let element = document.getElementById("ul")
+            let style = window.getComputedStyle(element)
+            let display = style.getPropertyValue('display')
+            if (display == "none") {
+                document.getElementById("ul").style.display = "block"
+            }
+            else {
+                document.getElementById("ul").style.display = "none"
+            }
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>

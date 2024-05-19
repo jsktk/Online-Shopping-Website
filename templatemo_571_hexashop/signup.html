@@ -1,0 +1,255 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <title>Flash shop</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{%static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+    <title>Document</title>
+</head>
+<style>
+    .black-btn {
+        width: 100%;
+        height: 44px;
+        display: inline-block;
+        text-align: center;
+        line-height: 44px;
+        background-color: #2a2a2a;
+        box-shadow: none;
+        border: 1px solid transparent;
+
+        transition: all 0.3s;
+    }
+
+    .black-btn a {
+        color: #fff;
+    }
+
+    .crl img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+    }
+</style>
+
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/index" class="logo">
+                            <img class="rounded-circle" width="130px" src="{% static 'assets/images/jojo-logo.png' %}">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/products">Products</a></li>
+                            <li><a href="/singleproduct">Single Product</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+<br><br><br><br>
+    <div class="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 crl">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{% static 'assets/images/signup-bg1.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'assets/images/signup-bg2.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'assets/images/signup-bg3.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="{% static 'assets/images/signup-bg4.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'assets/images/signup-bg5.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'assets/images/signup-bg6.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'assets/images/signup-bg7.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <center>
+                            <h1>Sign-Up</h1>
+                        </center>
+                    </div>
+                    <form id="contact" action="/signup" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-10">
+                                <fieldset>
+                                    <input name="firstname" type="text" placeholder="Firstname" required="">
+                                </fieldset><br>
+                            </div>
+                            <div class="col-lg-10">
+                                <fieldset>
+                                    <input name="lastname" type="text" placeholder="Lastname" required="">
+                                </fieldset><br>
+                            </div>
+                            <div class="col-lg-10">
+                                <fieldset>
+                                    <input name="username" type="text" placeholder="username" required="">
+                                </fieldset><br>
+                            </div>
+                            <div class="col-lg-10">
+                                <fieldset>
+                                    <input name="password" type="password" placeholder="password" required="">
+                                </fieldset><br>
+                            </div>
+                            <div class="col-lg-10">
+                                <fieldset>
+                                    <input name="password2" type="password" placeholder="confirm password" required="">
+                                </fieldset><br>
+                            </div>
+                            <div class="col-lg-10">
+                                <fieldset>
+                                    <input name="email" type="email" placeholder="email" required="">
+                                </fieldset><br>
+                            </div>
+                            <div class="col-lg-6">
+                                <fieldset>
+                                    <input name="mypic" type="file" placeholder="uploadpic" required="">
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 mt-3">
+                            <fieldset>
+                                <button type="submit" class="main-dark-button">Submit&nbsp;&nbsp;<i
+                                        class="fa fa-paper-plane"></i></button>
+                                <br><br>
+                        </div>
+                    </form>
+                    <div class="   ">
+                        <button type="submit" class="main-dark-button black-btn"><a href="/login">Login
+                                here!!!</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="{% static 'assets/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/accordions.js' %}"></script>
+    <script src="{% static 'assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'assets/js/imgfix.min.js' %}"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.js' %}"></script>
+
+    <!-- Global Init -->
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+
+    <script>
+
+        $(function () {
+            var selectedClass = "";
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+
+            });
+        });
+        function func() {
+            let element = document.getElementById("ul")
+            let style = window.getComputedStyle(element)
+            let display = style.getPropertyValue('display')
+            if (display == "none") {
+                document.getElementById("ul").style.display = "block"
+            }
+            else {
+                document.getElementById("ul").style.display = "none"
+            }
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>
